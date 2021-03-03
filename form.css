@@ -1,0 +1,10 @@
+table{
+    margin: auto;
+    margin-top: 20rem;
+    padding: 10px;
+    border: 2px solid black;
+}
+td{
+    
+    padding: 3px;
+}

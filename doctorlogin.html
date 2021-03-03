@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title> doctor login and registration  
+</title>
+<link rel="stylesheet" type ="text/css" href="style.css"/>
+</head>
+<body>
+    <div class="loginpage">
+        <img src="login.png" class="avtar">
+        <div class="form">
+                  <form class="registerform" >                    <br>
+                    <input type="text" placeholder="user name" required/>
+                    <input type="text" placeholder="email id" required/>
+                    <input type="text" placeholder="password"  required/>
+                    <input type="radio" placeholder="Male"  value="Male" required>
+                    <input type="radio"  placeholder="Female"  value="Female" required>
+                    <input type="submit" value="Submit">
+                </form>
+ 
+                <form class="loginform">
+                    <br>
+                    <input type="text" placeholder="user name"/>
+                    <input type="text" placeholder="password"/>
+                    <button type="submit">Login</button>
+                    <p class="message">Not Registered? <a href="#">Register</a></p>
+                </form>
+        </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <script>
+       $('.message a').click(function(){
+           $('form').animate({height:"toggle",opacity:"toggle"},"slow");
+       });
+    </script>
+</body>
+
+</html>

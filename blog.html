@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> BLOG MAIN PAGE </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", Helvetica, sans-serif;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* img image */
+.img {
+  background-color: 000;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+p{
+  font-size: 120%;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/*..................................nav bar...............................*/
+
+ul {
+  /* position: fixed; */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  margin-left: 145px;
+  color: rgb(10, 10, 10);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(231, 147, 38);
+}
+
+.active {
+  background-color: rgb(214, 138, 38);
+}
+
+h1{
+  color: rgb(211, 56, 133);
+}
+/*................................slideshow....................................*/
+
+.mySlides {
+  display:none;
+  width: 780px;
+  height: 350px;
+}
+
+h2{
+  font-weight: bolder;
+  color: rgb(221, 66, 182);
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Your Guide</h2>
+</div>
+
+<!-- ...................................nav bar.............................. -->
+
+<body>
+
+    <ul>
+      <li><a class="active" href="#">Beauty</a></li>
+      <li><a href="#">Weddings</a></li>
+      <li><a href="lifestyle.html">Lifestyle</a></li>
+      <li><a href="https://twitter.com/login?lang=en" class="mail"><i class="fa fa-envelope-square"></i> Mail Us </a><li></li>
+      <li><a href="https://www.google.com/" class="google"><i class="fa fa-whatsapp"></i> Whatsapp Us </a></li>
+    </ul>
+
+<!-- ...................................nav bar.............................. -->
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h1>Best Of Blogs</h1>
+      <h5>Supreme Services, oct 28, 2019</h5>
+      <div class="w3-content w3-display-container">
+          <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQswc7WCMoirR-ZsGuESMTFdd6Z7fz7HRirANfe9_T1Aj69P1bv&s" >
+          <img class="mySlides" src="data:image/jpeg;base64,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" >
+          <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHL25WqHke4ci5IWxEd7D6IhfSajIvX-Bn0wy8zGFOoaUiuC4d4w&s" >
+          <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu8odEjvGWR7W0kvQzD4QRQqSk34QMdPMz5D-N8K04Q0hJNRWF&s" >
+        
+        </div>
+        
+  <!-- ................................slideshow javascript................................. -->
+
+  <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      </script>
+
+  <!-- ................................................................. -->
+
+
+      <p>What would the beauty world be without the best beauty blogs? On the weekend 
+        (or whenever—who are we kidding?), we love nothing more than checking out what 
+        our favourite influencers are talking about, from the products they're raving 
+        about or the makeup tutorials they're loving. While makeup and skincare blogs 
+        launch all the time, we continue to go back to certain experts over and over 
+        again, whether that's because they've been pillars of the beauty community
+         for a long time or their expert knowledge is simply unprecedented.
+         Because it's rude not to share, we thought we'd let you in on the Byrdie
+          edit of the world's best beauty bloggers.</p>
+     
+    </div>
+    <div class="card">
+      <h1>Why You Need A Body Scrub Today</h1>
+      <h5>1 MONTH AGO by SORISH TARIYAL , October 2, 2019</h5>
+      <div class="img" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8c9cLNv-GCbnC_2sUSp2VtDYdunnCfhTk9ean4uP3GH--zixC&s"></div>
+      <p>Also known as a body polish or exfoliant, a body scrub removes dead skin cells, increases blood circulation and cleanses skin through exfoliation. Body scrubs consist of a liquid base with exfoliating granules which slough off dead skin when you massage it over your body. This action boosts blood circulation and drains your lymph nodes by increasing the blood flow to your skin’s surface. Sugar, salt and walnut shell powder are popular exfoliating components in body scrubs as they are abrasive enough to scrub skin but gentle enough to not damage it.
+
+          One must include this treatment in their skin care routine as it is essential for one to maintain soft, smooth and healthy skin.
+          
+          </p>
+
+         <h1>What Happens During a Body Scrub?</h1>
+      <p>
+          Before you start, you need to lie face-down on a massage table covered with a towel, sheet or a thin piece of plastic.
+          
+          The therapist will then gently rub the exfoliant on your back, behind your arms, and behind your legs and feet.
+          
+          Once the back of your body is done, this process is repeated on the front of your body. When the therapist is finished, you need to shower to rinse off the product.
+          
+          Try avoiding the use of shower gel as it’s good for your skin to absorb oils from the product</p>
+          <h1>Skin Rejuvenation</h1>
+              <p>As body scrubs remove dead skin and impurities, they leave your skin feeling soft and revitalized. This is especially important in rough areas like elbows and knees.</p> 
+              <br><br>
+              <h1>Prevents Ingrown Hair</h1>
+              <p>The exfoliating action of the scrub helps prevent ingrown hair and makes hair removal easier.  Click here to read Everything You Need To Know About Hair Removal</p>
+              <br><br>
+              <h1>Younger Looking Skin</h1>
+              <p>Exfoliating dead skin cells removes dullness from skin and increases blood circulation. Thus, getting a body scrub regularly will help make your skin look more vibrant and youthful.</p>
+              <br><br>
+              <h1>Moisturizes Your Skin</h1>
+              <p>opens up your pores which allows easy absorption of moisturizer into it.</p>
+              <br><br>
+              <h1>Stress Relief</h1>
+              <p>The process is carried out by a professional therapist who scrubs each part of your body. Thus, you can lie back and relax which helps relieve stress. </p>
+              <br><br>
+              <p>So if you want to reap these multiple benefits and refresh and rejuvenate your skin, you must try a body scrub today.</p>
+               </p>
+               <br><br><br><br><br>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h1>Hacks for Glowing Skin</h1>
+      <div class="img" ><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAA
+        D/2wCEAAkGBxMTEhUTExMVFRUWGBgXFRcXFRUVFxcXFxgXFxcYFxUYHSggGBolHRcXITEiJSktLi4
+        uFx8zODMtNygtLisBCgoKDg0OGhAQGC0lHR0tLS0tLS0tLS0tLS0tLS0tLSstKy0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+        LSstLf/AABEIAMIBAwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAGAAMEBQcCAQj/xAA9EAABAgQDBAgDBgYDAQEAAAA
+        BAAIDBBEhBRIxBkFRcRMiYYGRobHBBzLRI0JScuHwFCQzYoKSorLxwjT/xAAZAQADAQEBAAAAAAAAAAAAAAABAgMABAX/xAAkEQEBAA
+        ICAgMAAQUAAAAAAAAAAQIRITEDQRIyUSIUYXGR8P/aAAwDAQACEQMRAD8A05JJJMxaX3oX2+xb+HlXvBoSCxna46Hlv7kUFZd8Zp4ZIUIb3E+
+        n6LDGTRnalRmBSIpsO01TEJKZOkbuR1gkDfS6C8IhZnhaNhMCgCj5av4ovZOHZWsFihybFZw2qK1PQWKbDhpiCFPhw08idpyCxS4SYYxPMKrIlT4X
+        jgvGuSLkxDZavXNSJXjnoCac1RZhtlMJTEVCmijhmkRw/dCFZycSrCw6stzG799ir5oZYjTuNvp7rqfhOpnY4tcN49+IWxulMpsIy0Uy2IxoejIrsw/M4
+        Zj41PgjaJCY9l7rPcdl4hcYrj1hQ14UpQ91Ai3ZzERGhtdW9KOHBw1CG9jlFVi2HNuKWPuijC5B3QQ85o6zrbtKXO+l/JcxMLDuvEsxtSeJpu5KXh0d0Y1plYLV9gj
+        jC55bnCo2xwEzcB0NhBfYtrbrDt8R3rMG/Cydyl73QIR3MdEJNe0saWjuJW1NxaHcNa4XIHVu4ixo3U89FAmm53gxIcUNGgMRkMc8puT3qhJjfbJovwpm6VhxZd54ZojfM
+        sR5sJIx4EDoY8Msex1rhzXAAULXCxFufJFsKUhgVYHj/Y+tQuZiasA5kQD8WUHxy6Ils/DjHLoqJ/GMrfq10OrT36jvUoORJZp7VeJJLM8SSSWK8dosI+K87nn3NBqIbWt
+        5EjMfUDuW8FfNG0cwYk1GeTUuiu9ShTYqmY1HYE1C3rqbdcriGUBEGy7axFo8iBQID2OhXcUdQHACp0C5/J9nT4/qvpeKGipNAq+c2jGkMig1c4GncVUuhRpn5ahm6poOHerKFsmXAVeG/lb/APX6IYyextdSO1ZrctN6XqPK/nRW8LbFoPWLQOdPc+io5rYo6scw/mDq9zg63ghqdwOZhknK404EX7t6rNJ1qUrtXCcL5gNxyuIPgLd6soOLw3CoeKHQ1FP0PNYH/FxWuHzMI7CKqwksYeDUOLTvNyL65hW47jyR0HDd2zAXvSrL8Kx+IwCpJbzDqV4O1pXcRvpbRHGHz+doJ130S0fiuQ9cueozIi5dFQ2Gkh0eipsVx+HC+ZwG9MY7iXRsLtaVsNSeCiyuw8GI0umSYsVwDnEk5RX7rG1oANx1RnJtSc1UYrtlAyE5rg1A1uL7kXSEwIkIEXDgCORFQse2lwJsrMxITScoyuZXXK4aV7DW6OvhtPF8Do3awyWD8urfp3I2abe0jHYWo4qj+GPSfxkxLOBLWgRM24iuVt+JFP8AUo5xWRzCq9wKTENkSI0APdRtaa0qGA9mZx8UMexyu8T2IxHR4nQQ/kZeK7QCm6vZTx5KTIuMSjWdWE21QKF1OCkRZcQ4IhM1f1a7yT87ieOqspGWDGADcqJ3KSf9/s3Bl2sHVAA38TzO9R4EAMuGjMdSAKnm41KnRjuXkSHUa80xJVZPSnSDr5yODXuYO/LSveh+JGloMXo+kfBfQFrXVc1wNgQaXFQdSNFdzeJNbFMN2YEDXKaHgAd9eOi5wqjn5yOtQAAXoBu8z4oL42yc9F0DHtBtfWmh/XtUQsdDNNW/dP6q+mGAih39npv/APFWmGQHClq/s9h+qKfbjpjwCS5YTReIk0kJJJLJouKR8kGI7g1x8AV8zTT6vJ4uJ819DbbTPRycU/2keIK+dN45+6FPihzXzFKCFNhSReTS5roo/R5XEHcaeCDaGWxjLFGP8NUUOm9DOxMKrEbdDZcud/k68Pq4l5kMFNwXsbaJsMVJoFTzxIqh6ZjtYc8SriPlHuB7rTk11IOpHasvNGQ3v7QKD/lQKznJ6LkLnSr6U1zMt/yWXxMTnBCdHht6KGKUdSrjU0tUUpfgooxl/QxHxZyYbMV+zhtiRMrgdSaWF91tNLq2OFRyzgqmsTguJD4Zb+ZtvEWTDcNgv6zKKl2YizcySwERKNzUfvFaUz6g86q3l2tzgAGE/QtNqnnp3pbjYeZTJMgYblIpu8CN9QjHBz1QOFAqPD4Lt4RHJQMqTkbItodwo8y6is8Og1sqvGxlBTek5edAba/EN1dDXnQ1WkykUZWOrZwynsO4rHcScYsQ9i1XZ13SSra3q0HvpQpsDeQF/E6A1kxBjOFQ5pYQBWpBqLDmpmw0vF6V7nQujhhu8ipdXqjKNN+vBN7WYW5zXFpOZt2VqaEXFuCmfC5sQyT40V5e6JGc1tbBrIQyUA3DNn8kZyXL+MGPRZl1KwMlG9pd++8hOy4Tz2aHmPH/AMTpbIdaI0fhF+wuv6AKwqq6RH2kTmP+rVPJRhcjdLldPFKkCp1ppVdALkusiCnxKGHtzEhsRooBwrSteKh4FFbCY9roofFqSRTLTRoAB0bbXfc71NiRXZi0sqT8g7OKq4Zc6NEgMYaimd4ZpVg1cbVpprxS104TcsvXYhgnMAWmtadbUd3Hmo8eDlzGuZxJPDXQfvipMOCGwzDAIaGUABvSlKA8e1RZ5uUinChrrq2nhQopztXRsSDHFpANN/YbjyK9Q5OtObUnqsHgxoSR26p4cRWCvV4kSi84E/FadyShbxoO+o9vVYaz9+K1j4vPPRMN7vO7cA2le8LJ2oU8PwyQQ4GhF6pucJMRxIuTU04kBS5eHWg7R5lTcewssiggGj2g99LpNqWcCvYqF9mEdQoNQhDZRtIbR2I2lTZc17XnEUWK4fWtEFzmHBkUOIzjfm07gtViy4cFST2D1NU0uh4sQ8MmZeLLugxhla4UJNAb6d/JCczsbEqQwwojT8ry5zHUvq2mvLgi1uFGoJpbT9+PiVOZKHU04WBNvLj6cFWeTfZL44jbH4cySY6oL4jxegygDcBXdfzSiywjvJ6JrusC2r8u4i9BU7t9u9WcORc6lu87+7/1XOG4Y1lzfnp4bkd2hNY8+zWz2HPhsLI2V1flcDWg4E8RxTzm3U6Yi1UcNSX8CW3mpmHvoVUbSvs7krSW1VZj7OqVvTY/YCYVJh0Uh28rQsKcIb3Q2igFMvIge9UES4yuqieUmavY7fpztX2WlPlDuNw6VTuy8n0UlDZp14zhyfFe4eqtJyXDmKLhectcygysNRxvWtuCOPFTyu8f8LSXUpwso0uFMaqo01LClTxPpZSWhRhYkKTuWaumlcuFV5Sl9y8ad6IE5tL8FGmZqhFFJc+gqVFitHzEdyxpr2adMlxoDlp8xUOfmB8ziaAEmvAXTj6E1FlHBrUu+UcbjwWUx7eyLwIbczBUiptoXXI7q07kkuiLr1Da7iRXsSWa8+zqajG1E6mne6LnZl8YX0ENlN5P+rQPdZQ1af8AFeJWMOyC8i/FzW6clmDdUKpF/s9L9JFht4+1UY7ZwAITco0IbbTTRD2wtOnhk8XN8RUI1x6UzMvuczT8wHuoZXl0YzhW7Ov6jfBF8k9BuGNyktroT6onkIqnZyadL+GujBqm5Z6nMTQtRhJDgn4ckBuUljU+1qeEtR4cEBOOang1cvCJUN4TTinoijF10p4mSqhYyOqVPlQouKNsUfQT7AhzblTpeNSh4EH6qHOGjinZV1RRIuP5V+ZiosTqx2ZtiDW2/sUrAZmrAK3Fj3WTGN7016RxmstLjC51sVoc0/od4PaFaMKxpmKvl5trmOo15yvH3Sfukjjur2rRpTH2gDpBTtT45S9kz8dnS5mLGq7hRhvUF2NSxaax4QG+r2t9SokSdaHWdUcd3im2TVXZig9vYEyI1FBbNill0ZkItpJizIIUWZmaqPEjN3EVGo/ReAA6n2R2aQ1FmadUVLuAFTz5L3KaZn0AFw0Xv2neUjHhs0ueDd/MrmHCfENSKAaDQDmTvQP6MuYXHMdSkrRrGi1+4WSRL8o4KacU65R3Ot++1FFj/wAWnfzI7IQHmPeqz9HPxQP8wL6sBP8Asfp5IFclpxRsO7NFdDrR1nsP9zStPfDZHhuIOV4FHMNjXs+qxbA5zopmHE/C4V5GxW3tgmK3pA2hNL6FRznLo8d4C0yxzIxzAjPRw4E6O+veraTiKfjci10HNcPZccvvDw9FVShSW7MJZKIrWE5D8o9XMs9aNYtISfaFEguUljk8SsOFcRCvSU09HZYr5qJdNQ9U/HbR1TyChiNR10t4Ui+kYNVBxNuqlSM6AFExGOCn9Fm/kDMXgXJCYwmJehVxPUdZUIGSK07jYpFhXhDKRDexAPff9FJxiCS0pqQd128vcfVW82yrUdcJ2/yZNtBJFrS/e05v9TVGcsc8JrhvaComPygLXWsQlshFzSrAdWgtPNpp7JYe/qlxuU1sjYAPa1zflc0EciAR5FUOMy9QpGxeINc10s4/aQquYPxQyamna1x8HBPh+Fz62uYUFJ0E1srR0rYELqHBqFRH5IcFw3tb4fS6kVhHUDuPsU9/DLl0oOCIfI1mhtuKeAPqVFmMRf8Achl/An5f9RfxUv8AghwUWGaFw7f09kY1qG6dmuLhyYAPRJWwXqOg+X9jcQpiPvHZbmnohUWdfRp7KeJKxIxn4mRQ6ZFN0MA86k+6CnIq21dWJm3uB/7H6oVdolp3sDXldfRWz062NAhuaRQtB8l87y+qJ9ltrnybsrgXQSbje3iW/RLnjuHwyk7bbNNFKUrWx70IQ4WVxbwJHhZSIO38kW5unYOwmh8DdV8jjEOae+JCNW5jelPVQsXXcsreVKqZdWUu5CMtYTlJa9QIT0+2ImhLEuq9CYhxE5nTl0g48/K0OG7WiA5raCZ6Tqyudldc9HU4i1Fo8WhFCq8yDQbeiFhsbJFXJ4oC2oqOINiDwIVbjmOiGKuNK6AXJ5BXuIYMaVZZ2/t5ocmtmHuJiPNd3cto0sD2G7WPiRCDAe1tfmJFedKe6lR5vPMNa29Lmm47grCFhAPV0G+lj4qxkcFZDu0UKBotMPd1m8j7IhiCyHJMfaNRI4dVGJZ9hvHYfVKo9i3FoisOgeSO+/uiTE2VBVDgYyRIo40cPQ+iHs86WeIMBBQDPxXQplkSGcrm3aRxHqOxaBNmyA9pGddp7UJeR9NN2Z2iZMNoaNiAdZnu3iPREDGiteKw1sYsaHtJa5twQaEHiEY4T8RoYaBMtcx/42NLmu5tF2ny5KuOX6jn4/caJlXuQb0IyXxDk3g5nOh0Oj2m44gtqO5QMX+JEBvVgh0Vx0NC1neXX8An3E/jRVjuKw5aE6I4jg0ficbNA7/dV0u64/K2vff6rFJvaaNNzTnRX5mtqITBZjaEfKOJpqbrZMIjB7A8XBayncE0CxbgpJlJYHkQ35kKrxqNRpvqRT9+KsYx38Loa2pmgw66Uqs0ZLtVErFcBo2rfr5qgVnizqucTrU176lVbkpnctqVzMm66l964jrMYeEZfDico+JD4gOHmD6hCCmYFN9DHbErYGh/KbH99iXKbg43VbjLlWMBUchHDgCrqC5c7pT4ZTgKjwnJwuRKkB66DlUzeIthglxoAqeNtjCHyuB7wmjTG0YVK7YL3oOZAWczm17j98AdhoobMez/AHq99U0UnhvutTjRX1s3O3+wg+IC4jv6tHDLzoFncHEXC7XEciQo8XFCPveaO2/p9exk+ABcEEdhqmosemqBX4wRo41XDtpn6Ov6pbB+GvbQ8Fdme48KIhf8qENg5rpIRfxefKg9kXONlohn2rZpqH5tmV2YIjm9EPz8UaJcj4FEmgRqhbHxUA8CrARDWij4jBzNKBlO8dWirpxnWaOf781bQm1aoUy3rjsCaFqI5iiTsbIxzt9KN5mw+vcrKM1Du0Ma7Gc3HzA90+KeV0jYM6j2ntFuxb1sg/7EN/AXN5ipXz/InrBbxsVEBYaGvVhu73tqfOqrEb0I3tuknWCySIGx71Wd7bxquLRe9uyl/r4LQI8TK17uAJWXbRRSTnOjWtr+Z9fqsMAk6buPNVpVjOaHwKrilF7AOq4eV1BNzyXLlmcP0XgK9evAsDQthsazNEJx6zLDtbu8FoUpFssIwyYLHhzTQi4Wu7P4lnaCd4HmoZ46ro8d3BTDenHGqiQnKSwpTUxFlwdQDzuqiZwuFmr0bP8AUIgcFEmYdUZdGxulX/CQ/wADRyA5pt+CwnA1a3dq0ck7Gilu6q4GKM3kDmqTKLzL8VsfZdrjRrntFq0e4C40Arz8FGOyjSBV7zpq92+vb2K6/jmG4cPFcRZ1tNR4/vijuG5DcTZmENc26vWdoe/sPkq+cwOHuB7esfcq/msTZcVqeAVTFe55vYcELknloY/DuEIcDK3QPd53KM3myEdh20g/5u9kWUsg5cu1dOvsh2cYcwKJppqqJqGkp8apYrbr18KoXcT5lJEKyBg7DZRQY7OurWIOsVXR/nRgVCm0J48fteTR7/VFs5qhHHv63+LVXFHNxhfzgcbLYvh1GzNcP7WU7qtPmsewz560rS61H4axz0hB3sFOQJPqSqRO9NJzJJtzbpIlV20UxkguPGyzTaA0hCou9xPgLeiOdq4lQ1u7MCe66z/aWNVzW7hr/n+ytTQJT5t5quKsJ35Se2ncFXlKzyHqeSRSbqvUGNuXlEoguvRoiByWOvIrRtmyTBY4ageizmG6i0XYs1gN7/VS8vS3i7F0hOg238Fcy8SqFo0EjrA0IUrD8TvR1iorWCkBeiDVMS8UEKbCcnhDQw4O1Cai7Nw3fdCt5dylZgnkhLnQfM7IQjfKq6PsvDbo1HMWJuVbOOqhZBxyoJj4OG6KvmoAaiifKHZ9wukWEWxA+wHa53qR7IoQxsd/+dvNx/5FEpNk86Ry7R5gKrm1aRlXTLUuRsQ7FPWVnC+VV02yjwrOX+VKdQTQ+0IVVGH2hVxPf1VVuFYrkY1Vs7qUH4y+sd3ZlHkD7otnH3d2IIiRMzi78RJ8SrYoZpOHmjvLhqtH+HcQ9M0GnVaRzv8Aqs4kRf8AfEI92VZScFDQbxv0FVSJtcArdJetfZJEoSxaJV7jvAqBzsFneMRaONfxG/YBZH2NRQHPBO8dwAr9Vn2Mu6oBoC45jxodFqaBycd7qGVLntQohSs8YNV6kxeIM5eV4utU3mWZ0XLRPh8+sCnBxWbkrQPhu77M/mPsk8nSni+w7dDqFXzEqreG1cvhLndCFIYiWWfpxRHLTgIsUPxZZMta5l2nuRlCwaMjp3+KQhCxelnWUhuLjinlL8BG6YUCajqpfjKrZnFarNMUjEZkIZxKYTs5O8SqWama6IHaVsef5aEf7fUlEtbIV2NdWVhflp4EolabJ4jk4iKFMBS4hUaMhRihxFtwpEqbLqchJmC6iQ6vxJlHgqmb/VfyRFiLahDcV1Hk9iMGhzaCPSG8j7xy+Jv5VQsxEG0n9P8AzHo5D7SrzpzZdp+EtrEaO30uj7ZhgdO1Ghr4kBAOGOo7Nz9FpXw9gdcvO6hPM7k8K0pmgSXISRKA8UfnjEbi+/GgoB5oM2jbWJTWjfRFcU/auJscx86ob2ihUe46UNO3TgtTQIzJqopT8Y680yUrEuTqlmSeEGch103EC6cucyzOCVoXw5bSFXi4+yz0tWnbFS2SXh8TfxKn5OlPF2O4GicyLiU0UkNUF0V8NcdApTgkEWVceUCro8miN7KqHHgrabYaiy5UKPBIRFHgqsmYawqOLDUeJDVtEhKNFgpoA12Mf/LQ/wDIf8iiljkIbGxPsAN7XOHnX3RTCcnieT2I5MRAn3BcFiWjEOJDVbFZQq4itUGYZVA0QZgVahufh0KJIxoqaeFUIIP2lgVgk8C091aH1QoCtAnpcPY5h+8CPEarPi0gkGxBIPMaq+N4c+c5T8Nh5nBu4m/JbXsbJZWA01ueZ08qLItmJcvitbXU35BbpgrKQ2qkJVjmSXOVJErPJn+pE/O31KH8e+aL+b3KSSxgVFTQSSSs4Oi6OiSSDGzomikksxQ9RzWwYV8jOQ9l4kpeVbxexRJmwU1qSSiq8fomj7JJIwHjSm42iSSLK+OquZXqSxogvUeKkksy22UcftObfdGMqkknhKmtXkTQr1Jalhh+igR0kktNFXMqomUk
+        loaq2JqgfaMfzDuTfRJJVwS8nSw2L/rjkVuUj/THcvUlaIVMSSSWB//Z"></div>
+      <p>Do you want glowing and radiant skin for this festive season? 
+        An effective way to get glowing skin over time is by following 
+        a healthy diet, lifestyle and skincare regime. However, 
+        if you’re looking for a quick fix and instant boost of radiance,
+         it’s time to reach out for your makeup bag. Always remember that
+          getting radiant skin for your party makeup is not just about 
+          applying shimmery highlighter all over your face. What your 
+          makeup needs to do is add radiance to your complexion and reflect 
+          light on the correct places to give your face a sun-kissed glow.
+        </p>
+        <p>From eye shadow to lip color, using the right party makeup products in the right
+           places can help you get radiant looking skin.
+           Follow our expert tips below to get a luminous and dewy look using makeup –<br>
+           Picking the right base makeup – foundation and concealer is key. You need a hydrating 
+           base that will not just moisturize your skin but also add an illuminating sheen to it.
+            Add a few drops of illuminator to your moisturizer or foundation to give you that all
+             over glow. <br>
+
+           Use Shimmery Nude Eyeshadow
+           For your eyes, choose a shimmery shade which is close to your natural complexion, 
+           but a few shades lighter. Apply this all over your eyelids to neutralize darker
+            tones and reflect more light off your face. While powder eye shadow will certainly 
+            do the trick, you can also go for a cream shadow with a pearly sheen. Another great 
+            trick to brighten your eyes is by adding shimmer to the corner of your eyes.
+          </p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbPGcGwouv3FumyrMTtWVRkwA8M9iYGVCeGcEzV4AWkPQD01mG&s" ></div> 
+    <div class="card">
+      <h1>Hair Highlights for Indian Skin | Ideas for Red Highlights</h1>
+      <h5>MAY 13, 2019 by STEPHANIE SAMUL 2 min read</h5>
+      <p>The possibilities with red hair highlights are endless, simply
+         because the palette is wide, stretching from bright orangey coppers
+          to muted purplish burgundies – and all shades of magenta, copper 
+          in between. Here some burgundy and red hair color shades that make 
+          for great hair highlights.<br>These red highlights reflect everything 
+          that is good about red velvet, not least of all, the rich deep red color.
+           The blue tones in this shade make it a perfect red hair color for warm skin tones. In case this looks a tad too red for your taste,
+           you can always reduce the number of red highlights.</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h6 >.</h6>
+</div>
+
+</body>
+</html>

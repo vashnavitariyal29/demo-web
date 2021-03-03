@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Register Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type = "text/css" href="form.css">
+  <link rel="stylesheet" type ="text/css" href="style.css"/>
+</head>
+
+<body class="container">
+    <form action="signup.php" method="POST">
+        <table>
+            <tr>
+                <td>Name :</td>
+                <td><input type="text" placeholder="Username" name="username" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td>Password :</td>
+                <td><input type="password" name="pword" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td>Gender :</td>
+                <td>
+                    <input type="radio" name="gender" value="Male"  required>Male
+                    <input type="radio" name="gender" value="Female" required>Female
+                </td>
+            </tr>
+            <tr>
+                <td>E mail :</td>
+                <td><input type="email" name="email" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td>Phone no :</td>
+                <td>
+
+                    <input type="phone" name="phone"  class="form-control" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
+ <!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+     
+    <input type="tel" id="phoneNumber" />
+    <input type="text" id="code" />
+
+    
+    <button id="sign-in-button" onclick="submitPhoneNumberAuth()">
+      SIGN IN WITH PHONE
+    </button>
+    <button id="confirm-code" onclick="submitPhoneNumberAuthCode()">
+      ENTER CODE
+    </button>
+
+    
+    <div id="recaptcha-container"></div>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+
+    <script>
+      // Paste the config your copied earlier
+      var firebaseConfig = {
+    apiKey: "AIzaSyAfBMGUqVQFaL0nXwplxOwecuDWIVKzw5M",
+    authDomain: "signup-5a149.firebaseapp.com",
+    databaseURL: "https://signup-5a149.firebaseio.com",
+    projectId: "signup-5a149",
+    storageBucket: "signup-5a149.appspot.com",
+    messagingSenderId: "862929616863",
+    appId: "1:862929616863:web:9baa19d7ab1f8c38c0ce6a",
+    measurementId: "G-YYSS5JN3HP"
+  };
+
+      firebase.initializeApp(firebaseConfig);
+
+      // Create a Recaptcha verifier instance globally
+      // Calls submitPhoneNumberAuth() when the captcha is verified
+      window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
+        "recaptcha-container",
+        {
+          size: "normal",
+          callback: function(response) {
+            submitPhoneNumberAuth();
+          }
+        }
+      );
+
+      // This function runs when the 'sign-in-button' is clicked
+      // Takes the value from the 'phoneNumber' input and sends SMS to that phone number
+      function submitPhoneNumberAuth() {
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var appVerifier = window.recaptchaVerifier;
+        firebase
+          .auth()
+          .signInWithPhoneNumber(phoneNumber, appVerifier)
+          .then(function(confirmationResult) {
+            window.confirmationResult = confirmationResult;
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+      }
+
+      // This function runs when the 'confirm-code' button is clicked
+      // Takes the value from the 'code' input and submits the code to verify the phone number
+      // Return a user object if the authentication was successful, and auth is complete
+      function submitPhoneNumberAuthCode() {
+        var code = document.getElementById("code").value;
+        confirmationResult
+          .confirm(code)
+          .then(function(result) {
+            var user = result.user;
+            console.log(user);
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+      }
+
+      //This function runs everytime the auth state changes. Use to verify if the user is logged in
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          console.log("USER LOGGED IN");
+        } else {
+          // No user is signed in.
+          console.log("USER NOT LOGGED IN");
+        }
+      });
+    </script>
+  </body>
+</html>  -->

@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>PAYMENT </title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+<link rel="stylesheet" href="payment.css">
+    </head>
+
+
+<style>
+
+h3{
+  text-align: center;
+}
+
+</style>
+
+<body>
+<form action="payment.php" method="POST">
+<div class="wrapper">
+  <div class="payment">
+    <div class="payment-logo">
+      <p>p</p>
+    </div>
+    
+    <h2>Payment Gateway</h2>
+    <div class="form">
+      <div class="card space icon-relative">
+        <label class="label">Card holder:</label>
+        <input type="text" name ="name"class="input" placeholder="Your Name" required>
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="card space icon-relative">
+        <label class="label">Card number:</label>
+        <input type="text"  name ="cardNo" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number" required>
+        <i class="far fa-credit-card"></i>
+      </div>
+      <div class="card-grp space">
+        <div class="card-item icon-relative">
+          <label class="label">Expiry date:</label>
+          <input type="text" name="expiry-data" class="input"  placeholder="00 / 00" required>
+          <i class="far fa-calendar-alt"></i>
+        </div>
+        <div class="card-item icon-relative">
+          <label class="label">CVV:</label>
+          <input type="text" class="input" data-mask="000" placeholder="000" required>
+          <i class="fas fa-lock"></i>
+        </div>
+      </div>
+      
+      <div class="card space icon-relative">
+            <label class="label">Address:</label>
+            <input type="text" name="address" class="input"  placeholder="xyz lane" required>
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+
+        <div class="card space icon-relative">
+          <label class="label">Category</label>
+          <input type="text" name="category" class="input"  placeholder="eg plumber,salon..." required>
+          <i class="fas fa-user"></i>
+        </div>
+
+        <div class="card space icon-relative">
+                <label class="label">Preferred Time: </label>
+                <input type="text" name="time" class="input" data-mask="00:00" placeholder="00:00" required>
+                <i class="fas fa-user"></i>
+              </div>
+
+        <div class="card space icon-relative">
+                  <label class="label">Preferred Date: </label>
+                  <input type="text" name="date" class="input" data-mask="00/00/0000" placeholder="YYYY/MM/DD" required>
+                  <i class="fas fa-user"></i>
+                </div>
+     <h2>OR Pay by PAYTM</h2>
+</a><h3><a href="https://paytm.com/">CLICK HERE</a></h3><pre>
+
+     <Button class="btn" type="submit">PAY</Button>  
+      
+  </div>
+</div>
+      
+    </div>
+  </div>
+</div>
+</form>
+<script>
+
+$("input[name='expiry-data']").mask("00 / 00");
+$("input[name='time']").mask("00 / 00");
+
+</script>
+</form>
+</body>
+</html>
